@@ -45,6 +45,12 @@ export default class JobsManagement extends React.Component {
   }
 
   componentDidMount() {
+    const axiosConfig = {
+      headers: {
+        'Authorization': 'Bearer ' + JSON.parse(window.localStorage.getItem('token'))
+      }
+    }
+
     axios.get('/jobs')
       .then(response => {
         this.setState({ jobs: response.data })

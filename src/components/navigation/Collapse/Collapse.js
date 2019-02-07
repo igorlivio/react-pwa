@@ -7,7 +7,7 @@ const collapse = (props) => (
         href={ '#' + props.collapseId } role="button">
         { props.buttonText }
       </a>
-      <div className="collapse mb-3" id={props.collapseId}>
+      <div className="collapse mt-3 mb-3" id={props.collapseId}>
         <div className="card card-body mb-3">
           { props.children }
         </div>
